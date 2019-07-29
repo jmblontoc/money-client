@@ -1,0 +1,9 @@
+div#add-btn {
+    background-color: #07008a;
+    color: white;
+    top: 0;
+    margin: 10px;
+    padding: 7px;
+    right: 0;
+    position: absolute;
+}

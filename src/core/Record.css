@@ -1,0 +1,27 @@
+div.record-wrapper {
+    background-color: #baf7ca;
+    text-align: left;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+
+    display: flex;
+}
+
+div.column {
+    flex: 50%;
+}
+
+div.amount {
+    text-align: right;
+    font-size: 1.4rem;
+}
+
+div.amount span {
+    vertical-align: middle;
+}
+
+div.date-created {
+    font-size: 0.9rem;
+    font-style: italic;
+}

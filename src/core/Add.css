@@ -1,0 +1,31 @@
+.form {
+    text-align: left;
+    padding: 10px;
+}
+
+.add-f {
+    width: 100%;   
+    font-size: 1.1rem;
+    font-family: sans-serif; 
+    color: blue;
+}
+
+label {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+button {
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px;
+    margin-top: 20px;
+    width: 50%;
+}
+
+#save { background-color: #07008a; }
+
+.errors {
+    color: red;
+}
