@@ -42,7 +42,7 @@ class Add extends React.Component {
             return
         }
 
-        if (this.state.title.trim() === "" || this.state.description.trim() === "") {
+        if (this.state.title.trim() === "") {
             this.setState({ emptyFields: true })
             return
         }
