@@ -5,7 +5,8 @@ import moment from 'moment'
 class Record extends React.Component {
 
     formatter = "LLLL"
-    formattedDate = moment(this.props.record.date, this.formatter).add(8, 'h').format(this.formatter)
+    moment = moment(this.props.record.date, this.formatter)
+    formattedDate = this.props.record.is_old ? moment.format(this.formatter) : moment.add(8, 'h').format(this.formatter)
 
 
     render() {
