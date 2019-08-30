@@ -1,9 +1,39 @@
 div#add-btn {
     background-color: #07008a;
     color: white;
-    top: 0;
+    /* top: 0;
     margin: 10px;
     padding: 7px;
     right: 0;
-    position: absolute;
+    position: absolute; */
+}
+
+div#send-daily-report-btn {
+    background-color: #07008a;
+    color: white;
+    /* top: 0;
+    margin: 10px;
+    padding: 7px;
+    left: 0;
+    position: absolute; */
+}
+
+div#send-analytics {
+    background-color: #07008a;
+    color: white;
+    /* top: 0;
+    margin: 10px;
+    padding: 7px;
+    left: 200;
+    position: absolute; */
+}
+
+div.action-holder {
+    display: inline-flex;
+}
+
+div.actions {
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
 }

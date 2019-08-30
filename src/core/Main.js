@@ -7,6 +7,7 @@ class Main extends React.Component {
 
     apiUrl = `https://money-server-api.herokuapp.com`
     recordsUrl = this.apiUrl.concat(`/v1/records`)
+    dailyExpenseReportUrl = this.apiUrl.concat(`/v1/email/daily`)
 
     constructor(props) {
         super(props)
@@ -18,15 +19,15 @@ class Main extends React.Component {
     }
 
     willAddF() {
-        this.setState({ willAdd: this.willAdd})
+        this.setState({ willAdd: this.willAdd })
     }
 
     fetchRecords = () => {
         fetch(this.recordsUrl)
             .then(response => response.json())
             .then(data => {
-                this.setState({ 
-                    records: data.records, 
+                this.setState({
+                    records: data.records,
                     total: data.total,
                     willAdd: false
                 })
@@ -56,31 +57,55 @@ class Main extends React.Component {
         }
     }
 
+    sendDailyReport = () => {
+        fetch(this.dailyExpenseReportUrl)
+            .then(response => {
+                if (response.status >= 200) {
+                    alert("Email successfully sent")
+                }
+            })
+    }
+
     componentDidMount() {
         this.fetchRecords()
     }
 
     render() {
         if (this.state.willAdd) {
-            return(
+            return (
                 <div>
-                    <Add 
-                        willAdd={this.willAddF}/>
+                    <Add
+                        willAdd={this.willAddF} />
                 </div>
             )
         }
         else {
             return (
                 <div>
+                    <div className="action-holder">
+                        <div
+                            id="add-btn"
+                            className="actions"
+                            onClick={() => { this.setState({ willAdd: true }) }}>
+                            Add Record
+                    </div>
+                        <div
+                            id="send-daily-report-btn"
+                            className="actions"
+                            onClick={() => this.sendDailyReport()}>
+                            Send Daily Report
+                    </div>
+                        <div
+                            id="send-analytics"
+                            className="actions">
+                            Send Analytics
+                        </div>
+                    </div>
                     <div>
                         <p>Total: <b>{this.state.total ? this.state.total : 0}</b></p>
                     </div>
                     {this.loadRecords()}
-                    <div 
-                        id="add-btn"
-                        onClick={() => { this.setState({ willAdd: true }) }}>
-                        Add Record
-                    </div>
+
                 </div>
             )
         }
