@@ -6,9 +6,7 @@ class Record extends React.Component {
 
     formatter = "LLLL"
     momentObj = moment(this.props.record.date, this.formatter)
-    formattedDate = this.props.record.is_old ? 
-                        this.momentObj.format(this.formatter) : 
-                        this.momentObj.add(8, 'h').format(this.formatter)
+    formattedDate = this.momentObj.format(this.formatter)
 
 
     render() {
