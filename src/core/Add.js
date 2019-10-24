@@ -6,7 +6,7 @@ class Add extends React.Component {
     constructor(props) {
         super(props)
 
-        this.addUrl = `https://money-server-api.herokuapp.com/v1/add-record`
+        this.addUrl = `https://money-server-api.herokuapp.com/v2/records`
 
         this.state = {
             // form data
