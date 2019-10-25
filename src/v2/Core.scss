@@ -1,0 +1,59 @@
+* {
+    font-family: sans-serif;
+}
+
+div.head {
+    justify-content: center;
+}
+
+div.record-loader {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.add-btn {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+    border-radius: 50px;
+    background-color: #28a745;
+    color: white;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+div.main-holder {
+    display: block;
+    margin: 0.5rem;
+
+        div.record-holder {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            border: solid 0.5px #ddd;
+            padding: 0.3rem;
+            margin: 0.2rem;
+            border-radius: 10;
+            box-shadow: 2px 2px 2px gray;
+
+            div.title {
+                font-size: 0.82rem;
+
+                div.sub {
+                    font-style: italic;
+                    font-size: 0.6rem;
+                }
+            }
+
+            div.amount {
+                margin-left: auto;
+            }
+        }
+}
