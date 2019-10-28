@@ -1,5 +1,15 @@
+@import "~react-datepicker/dist/react-datepicker.css";
+
 * {
     font-family: sans-serif;
+}
+
+.modal {
+    z-index: 99999 !important;
+}
+
+.react-datepicker-wrapper {
+    width: 100%;
 }
 
 div.head {
@@ -13,13 +23,17 @@ div.record-loader {
     align-items: center;
 }
 
+div[data-today='today'] {
+    box-shadow: 2px 2px 2px crimson !important;
+}
+
 div.add-btn {
     position: fixed;
     bottom: 0;
     right: 0;
     margin: 1rem;
     border-radius: 50px;
-    background-color: #28a745;
+    background-color: #007bff;
     color: white;
     height: 50px;
     width: 50px;
