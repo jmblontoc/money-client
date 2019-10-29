@@ -63,6 +63,8 @@ class Home extends React.Component {
             let records = await fetch(`${API_URL}${RECORDS_ENDPOINT}`)
             let json = await records.json()
 
+            this.fetchTotalToday()
+
             temp = json
         }
         catch (err) {
